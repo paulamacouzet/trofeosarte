@@ -514,12 +514,12 @@ export default function HomePage() {
                     <div className="aspect-square bg-gray-200 rounded-lg mb-4 overflow-hidden">
                       <img
                         src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/copa.png-RTictUeTgugJ3BcJrH2K5edw5bMzkv.jpeg"
-                        alt="Copa Morelos - Trofeo insignia personalizado para torneo anual de golf México"
+                        alt="Copa Morelia - Trofeo insignia personalizado para torneo anual de golf México"
                         className="w-full h-full object-cover"
                         loading="lazy"
                       />
                     </div>
-                    <h3 className="text-xl font-bold text-black mb-2">Copa Morelos</h3>
+                    <h3 className="text-xl font-bold text-black mb-2">Copa Morelia</h3>
                     <p className="text-gray-600">Torneo anual de golf</p>
                   </CardContent>
                 </Card>
@@ -904,7 +904,7 @@ export default function HomePage() {
               <div>
                 <h4 className="font-bold mb-4">Contacto</h4>
                 <p className="text-gray-200">
-                  <strong>Email:</strong> rmartistaplastico@gmail.com
+                  <strong>Email:</strong> contacto@rolandomacouzet.com
                 </p>
               </div>
             </div>

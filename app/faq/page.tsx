@@ -143,7 +143,7 @@ export default function FAQPage() {
                 <p className="text-lg text-black mb-6">¿Tienes más preguntas sobre nuestros trofeos personalizados?</p>
                 <div className="space-y-4 sm:space-y-0 sm:space-x-4 sm:flex sm:justify-center">
                   <Button
-                    onClick={() => window.open("https://calendly.com/rmartistaplastico", "_blank")}
+                    onClick={() => window.open("https://wa.me/5214433735374?text=" + encodeURIComponent("Hola, me gustaría agendar una llamada para un trofeo personalizado"), "_blank")}
                     className="bg-[#446047] hover:bg-[#446047]/90 text-white px-8 py-3 text-lg font-medium rounded-full"
                   >
                     Agendar una llamada
@@ -214,7 +214,7 @@ export default function FAQPage() {
                 <div>
                   <h4 className="font-bold mb-4">Contacto</h4>
                   <p className="text-gray-200">
-                    <strong>Email:</strong> rmartistaplastico@gmail.com
+                    <strong>Email:</strong> contacto@rolandomacouzet.com
                   </p>
                 </div>
               </div>

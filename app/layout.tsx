@@ -85,7 +85,7 @@ export default function RootLayout({
               url: "https://rolandomacouzet.com/trofeosarte",
               image: "https://rolandomacouzet.com/trofeosarte/images/trofeo-artistico-torneo-golf-escultura-bronce-mano-pelota.png",
               telephone: "+52-443-373-5374",
-              email: "rmartistaplastico@gmail.com",
+              email: "contacto@rolandomacouzet.com",
               founder: {
                 "@type": "Person",
                 name: "Rolando Macouzet",

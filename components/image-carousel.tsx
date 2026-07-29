@@ -5,13 +5,13 @@ import type React from "react"
 import { useEffect, useRef, useState } from "react"
 
 const carouselImages = [
-  { src: "/images/galeria1.png", alt: "Galería de trofeos de golf hechos a mano" },
-  { src: "/images/galeria2.png", alt: "Trofeo artístico para torneo de golf" },
-  { src: "/images/galeria3.png", alt: "Galería de trofeos deportivos personalizados" },
-  { src: "/images/galeria4.png", alt: "Trofeos de golf para clubes exclusivos" },
-  { src: "/images/galeria5.png", alt: "Galería de trofeos de pádel hechos a mano" },
-  { src: "/images/galeria6.png", alt: "Trofeos artísticos para torneos deportivos" },
-  { src: "/images/galeria7.png", alt: "Galería de trofeos de tenis personalizados" },
+  { src: "/trofeosarte/images/galeria1.png", alt: "Galería de trofeos de golf hechos a mano" },
+  { src: "/trofeosarte/images/galeria2.png", alt: "Trofeo artístico para torneo de golf" },
+  { src: "/trofeosarte/images/galeria3.png", alt: "Galería de trofeos deportivos personalizados" },
+  { src: "/trofeosarte/images/galeria4.png", alt: "Trofeos de golf para clubes exclusivos" },
+  { src: "/trofeosarte/images/galeria5.png", alt: "Galería de trofeos de pádel hechos a mano" },
+  { src: "/trofeosarte/images/galeria6.png", alt: "Trofeos artísticos para torneos deportivos" },
+  { src: "/trofeosarte/images/galeria7.png", alt: "Galería de trofeos de tenis personalizados" },
 ]
 
 export default function ImageCarousel() {

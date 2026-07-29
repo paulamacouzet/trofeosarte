@@ -80,7 +80,7 @@ export default function HomePage() {
             <div className="flex-shrink-0">
               <a href="#hero" className="cursor-pointer" aria-label="Ir al inicio">
                 <Image
-                  src="/images/logotrofeosarte.png"
+                  src="/trofeosarte/images/logotrofeosarte.png"
                   alt="Logo de Trofeos Arte - trofeos personalizados en México"
                   width={300}
                   height={120}
@@ -155,7 +155,7 @@ export default function HomePage() {
                 </li>
                 <li>
                   <a
-                    href="/faq"
+                    href="/trofeosarte/faq"
                     className="hover:text-[#446047] transition-colors font-normal whitespace-nowrap"
                     aria-label="Ir a Preguntas Frecuentes"
                   >
@@ -211,7 +211,7 @@ export default function HomePage() {
                 <div ref={heroCarouselRef} className="flex overflow-x-auto space-x-4 pb-4 scrollbar-hide">
                   <div className="flex-shrink-0 w-64 aspect-[3/4] rounded-lg overflow-hidden">
                     <img
-                      src="/images/trofeo-artistico-torneo-golf-escultura-bronce-mano-pelota.png"
+                      src="/trofeosarte/images/trofeo-artistico-torneo-golf-escultura-bronce-mano-pelota.png"
                       alt="Trofeo artístico para torneo de golf"
                       className="w-full h-full object-cover"
                       loading="eager"
@@ -219,7 +219,7 @@ export default function HomePage() {
                   </div>
                   <div className="flex-shrink-0 w-64 aspect-[3/4] rounded-lg overflow-hidden">
                     <img
-                      src="/images/escultura-artistica-golfistas-bronce-trofeos-personalizados.png"
+                      src="/trofeosarte/images/escultura-artistica-golfistas-bronce-trofeos-personalizados.png"
                       alt="Galería de trofeos de golf hechos a mano"
                       className="w-full h-full object-cover"
                       loading="eager"
@@ -227,7 +227,7 @@ export default function HomePage() {
                   </div>
                   <div className="flex-shrink-0 w-64 aspect-[3/4] rounded-lg overflow-hidden">
                     <img
-                      src="/images/trofeo-artistico-tenis-padel-premio-exclusivo.png"
+                      src="/trofeosarte/images/trofeo-artistico-tenis-padel-premio-exclusivo.png"
                       alt="Trofeo artístico para torneo de pádel y tenis"
                       className="w-full h-full object-cover"
                       loading="eager"
@@ -260,7 +260,7 @@ export default function HomePage() {
                 <div className="flex items-start justify-center">
                   <div className="w-full aspect-[3/4] rounded-lg overflow-hidden">
                     <img
-                      src="/images/trofeo-artistico-torneo-golf-escultura-bronce-mano-pelota.png"
+                      src="/trofeosarte/images/trofeo-artistico-torneo-golf-escultura-bronce-mano-pelota.png"
                       alt="Trofeo artístico para torneo de golf"
                       className="w-full h-full object-cover"
                       loading="eager"
@@ -272,7 +272,7 @@ export default function HomePage() {
                 <div className="flex items-start justify-center">
                   <div className="w-full aspect-[3/4] rounded-lg overflow-hidden">
                     <img
-                      src="/images/escultura-artistica-golfistas-bronce-trofeos-personalizados.png"
+                      src="/trofeosarte/images/escultura-artistica-golfistas-bronce-trofeos-personalizados.png"
                       alt="Galería de trofeos de golf hechos a mano"
                       className="w-full h-full object-cover"
                       loading="eager"
@@ -299,7 +299,7 @@ export default function HomePage() {
                 <div className="flex items-start justify-center">
                   <div className="w-full aspect-[3/4] rounded-lg overflow-hidden">
                     <img
-                      src="/images/trofeo-artistico-tenis-padel-premio-exclusivo.png"
+                      src="/trofeosarte/images/trofeo-artistico-tenis-padel-premio-exclusivo.png"
                       alt="Trofeo artístico para torneo de pádel y tenis"
                       className="w-full h-full object-cover"
                       loading="eager"
@@ -311,7 +311,7 @@ export default function HomePage() {
               {/* Icons - Desktop Only */}
               <div className="text-center mb-4">
                 <img
-                  src="/images/iconos3.png"
+                  src="/trofeosarte/images/iconos3.png"
                   alt="Iconos deportivos - golf, tenis, pádel para trofeos personalizados"
                   className="h-12 mx-auto"
                   loading="lazy"
@@ -578,63 +578,63 @@ export default function HomePage() {
             <div className="hidden lg:grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 md:gap-6 mb-12">
               {[
                 {
-                  src: "/images/53.png",
+                  src: "/trofeosarte/images/53.png",
                   alt: "Trofeo artístico de mano en bronce para golf - Premio personalizado clubes deportivos México",
                 },
                 {
-                  src: "/images/54.png",
+                  src: "/trofeosarte/images/54.png",
                   alt: "Trofeo familiar en piedra - Premio único para torneos familiares deportivos",
                 },
                 {
-                  src: "/images/55.png",
+                  src: "/trofeosarte/images/55.png",
                   alt: "Trofeo cultural con palos de golf cruzados - Premio torneo cultural deportivo",
                 },
                 {
-                  src: "/images/56.png",
+                  src: "/trofeosarte/images/56.png",
                   alt: "Trofeo de equipo en bronce para golf - Premio grupal personalizado clubes México",
                 },
                 {
-                  src: "/images/57.png",
+                  src: "/trofeosarte/images/57.png",
                   alt: "Trofeo de celebración en equipo - Premio para torneos deportivos México",
                 },
                 {
-                  src: "/images/58.png",
+                  src: "/trofeosarte/images/58.png",
                   alt: "Trofeos Universidad Montrer con pantera - Premios institucionales deportivos",
                 },
                 {
-                  src: "/images/59.png",
+                  src: "/trofeosarte/images/59.png",
                   alt: "Figura de victoria dinámica en bronce - Trofeo deportivo artístico México",
                 },
                 {
-                  src: "/images/60.png",
+                  src: "/trofeosarte/images/60.png",
                   alt: "Trofeo de palos de golf cruzados - Premio clásico para golf clubes deportivos",
                 },
                 {
-                  src: "/images/61.png",
+                  src: "/trofeosarte/images/61.png",
                   alt: "Trofeo geométrico de raquetas de pádel - Premio moderno pádel México",
                 },
                 {
-                  src: "/images/62.png",
+                  src: "/trofeosarte/images/62.png",
                   alt: "Trofeo de raquetas de pádel cruzadas - Premio tradicional pádel deportivo",
                 },
                 {
-                  src: "/images/67.png",
+                  src: "/trofeosarte/images/67.png",
                   alt: "Trofeos de podio en bronce para golf - Premios 1er, 2do y 3er lugar torneos",
                 },
                 {
-                  src: "/images/63.png",
+                  src: "/trofeosarte/images/63.png",
                   alt: "Trofeo moderno de ciclismo - Escultura artística para ciclismo deportivo México",
                 },
                 {
-                  src: "/images/64.png",
+                  src: "/trofeosarte/images/64.png",
                   alt: "Figura dinámica corriendo en bronce - Trofeo para atletismo deportivo",
                 },
                 {
-                  src: "/images/65.png",
+                  src: "/trofeosarte/images/65.png",
                   alt: "Trofeo de celebración de victoria en tenis - Premio artístico tenis México",
                 },
                 {
-                  src: "/images/66.png",
+                  src: "/trofeosarte/images/66.png",
                   alt: "Jugador de tenis en acción - Trofeo dinámico para tenis clubes deportivos",
                 },
               ].map((trophy, index) => (
@@ -663,21 +663,21 @@ export default function HomePage() {
                   title: "Athletic Grace",
                   size: "50 x 70 cm",
                   description: "Una representación dinámica del movimiento atlético en colores vibrantes",
-                  image: "/images/20.png",
+                  image: "/trofeosarte/images/20.png",
                   alt: "Pintura al óleo Athletic Grace - Arte deportivo con espátula 50x70cm México",
                 },
                 {
                   title: "Pelican's Serenity",
                   size: "45 x 60 cm",
                   description: "La elegancia natural capturada en expresivos trazos de espátula",
-                  image: "/images/21.png",
+                  image: "/trofeosarte/images/21.png",
                   alt: "Pintura al óleo Pelican's Serenity - Arte con espátula 45x60cm México",
                 },
                 {
                   title: "Golf Passion",
                   size: "55 x 75 cm",
                   description: "La energía y concentración del swing perfecto en colores intensos",
-                  image: "/images/22.png",
+                  image: "/trofeosarte/images/22.png",
                   alt: "Pintura al óleo Golf Passion - Arte deportivo golf con espátula 55x75cm México",
                 },
               ].map((artwork, index) => (
@@ -822,7 +822,7 @@ export default function HomePage() {
             <div className="grid md:grid-cols-3 gap-8">
               <div>
                 <Image
-                  src="/images/logotrofeosarte.png"
+                  src="/trofeosarte/images/logotrofeosarte.png"
                   alt="Logo de Trofeos Arte - trofeos personalizados en México"
                   width={200}
                   height={80}
@@ -883,7 +883,7 @@ export default function HomePage() {
                     </a>
                   </li>
                   <li>
-                    <a href="/faq" className="hover:text-white transition-colors cursor-pointer">
+                    <a href="/trofeosarte/faq" className="hover:text-white transition-colors cursor-pointer">
                       FAQ
                     </a>
                   </li>

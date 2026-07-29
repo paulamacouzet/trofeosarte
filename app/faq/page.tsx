@@ -93,9 +93,9 @@ export default function FAQPage() {
             <nav className="flex items-center">
               {/* Logo - Fixed Left */}
               <div className="flex-shrink-0">
-                <a href="/" className="cursor-pointer">
+                <a href="/trofeosarte" className="cursor-pointer">
                   <Image
-                    src="/images/logotrofeosarte.png"
+                    src="/trofeosarte/images/logotrofeosarte.png"
                     alt="Logo de Trofeos Arte - trofeos personalizados en México"
                     width={300}
                     height={120}
@@ -109,7 +109,7 @@ export default function FAQPage() {
                 <ul className="hidden md:flex items-center space-x-8 text-black">
                   <li>
                     <a
-                      href="/#nosotros"
+                      href="/trofeosarte/#nosotros"
                       className="hover:text-[#446047] transition-colors font-normal whitespace-nowrap"
                     >
                       Nosotros
@@ -117,7 +117,7 @@ export default function FAQPage() {
                   </li>
                   <li>
                     <a
-                      href="/#servicios"
+                      href="/trofeosarte/#servicios"
                       className="hover:text-[#446047] transition-colors font-normal whitespace-nowrap"
                     >
                       Servicios
@@ -125,7 +125,7 @@ export default function FAQPage() {
                   </li>
                   <li>
                     <a
-                      href="/#portafolio"
+                      href="/trofeosarte/#portafolio"
                       className="hover:text-[#446047] transition-colors font-normal whitespace-nowrap"
                     >
                       Portafolio
@@ -133,20 +133,20 @@ export default function FAQPage() {
                   </li>
                   <li>
                     <a
-                      href="/#mas-arte"
+                      href="/trofeosarte/#mas-arte"
                       className="hover:text-[#446047] transition-colors font-normal whitespace-nowrap"
                     >
                       Más Arte
                     </a>
                   </li>
                   <li>
-                    <a href="/faq" className="hover:text-[#446047] transition-colors font-bold whitespace-nowrap">
+                    <a href="/trofeosarte/faq" className="hover:text-[#446047] transition-colors font-bold whitespace-nowrap">
                       FAQ
                     </a>
                   </li>
                   <li>
                     <a
-                      href="/#contact"
+                      href="/trofeosarte/#contact"
                       className="hover:text-[#446047] transition-colors font-normal whitespace-nowrap"
                     >
                       Contacto
@@ -236,7 +236,7 @@ export default function FAQPage() {
               <div className="grid md:grid-cols-3 gap-8">
                 <div>
                   <Image
-                    src="/images/logotrofeosarte.png"
+                    src="/trofeosarte/images/logotrofeosarte.png"
                     alt="Logo de Trofeos Arte - trofeos personalizados en México"
                     width={200}
                     height={80}
@@ -248,32 +248,32 @@ export default function FAQPage() {
                   <h4 className="font-bold mb-4">Navegación</h4>
                   <ul className="space-y-2 text-gray-200">
                     <li>
-                      <a href="/#nosotros" className="hover:text-white transition-colors">
+                      <a href="/trofeosarte/#nosotros" className="hover:text-white transition-colors">
                         Nosotros
                       </a>
                     </li>
                     <li>
-                      <a href="/#servicios" className="hover:text-white transition-colors">
+                      <a href="/trofeosarte/#servicios" className="hover:text-white transition-colors">
                         Servicios
                       </a>
                     </li>
                     <li>
-                      <a href="/#portafolio" className="hover:text-white transition-colors">
+                      <a href="/trofeosarte/#portafolio" className="hover:text-white transition-colors">
                         Portafolio
                       </a>
                     </li>
                     <li>
-                      <a href="/#mas-arte" className="hover:text-white transition-colors">
+                      <a href="/trofeosarte/#mas-arte" className="hover:text-white transition-colors">
                         Más Arte
                       </a>
                     </li>
                     <li>
-                      <a href="/faq" className="hover:text-white transition-colors">
+                      <a href="/trofeosarte/faq" className="hover:text-white transition-colors">
                         FAQ
                       </a>
                     </li>
                     <li>
-                      <a href="/#contact" className="hover:text-white transition-colors">
+                      <a href="/trofeosarte/#contact" className="hover:text-white transition-colors">
                         Contacto
                       </a>
                     </li>

@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     description: "Trofeos artísticos personalizados para clubes y torneos deportivos en México.",
     images: [
       {
-        url: "/images/trofeo-artistico-torneo-golf-escultura-bronce-mano-pelota.png",
+        url: "/trofeosarte/images/trofeo-artistico-torneo-golf-escultura-bronce-mano-pelota.png",
         width: 1200,
         height: 630,
         alt: "Trofeo artístico de golf en bronce para clubes deportivos en México",
@@ -32,7 +32,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Trofeos Arte - Arte que honra la grandeza",
     description: "Trofeos artísticos personalizados para clubes y torneos deportivos en México.",
-    images: ["/images/trofeo-artistico-torneo-golf-escultura-bronce-mano-pelota.png"],
+    images: ["/trofeosarte/images/trofeo-artistico-torneo-golf-escultura-bronce-mano-pelota.png"],
   },
   robots: {
     index: true,
@@ -49,9 +49,9 @@ export const metadata: Metadata = {
     canonical: "https://trofeosarte.com",
   },
   icons: {
-    icon: "/favicon.png",
-    shortcut: "/favicon.png",
-    apple: "/favicon.png",
+    icon: "/trofeosarte/favicon.png",
+    shortcut: "/trofeosarte/favicon.png",
+    apple: "/trofeosarte/favicon.png",
   },
   verification: {
     google: "tu-codigo-verificacion-google-aqui",
@@ -111,7 +111,7 @@ export default function RootLayout({
         />
 
         <link rel="canonical" href="https://trofeosarte.com" />
-        <link rel="icon" href="/favicon.png" />
+        <link rel="icon" href="/trofeosarte/favicon.png" />
 
         {/* Structured Data */}
         <script

@@ -1,17 +1,6 @@
+# Este archivo aplica al host interno trofeosarte.vercel.app.
+# El robots.txt que gobierna el dominio público vive en la raíz de rolandomacouzet.com.
 User-agent: *
 Allow: /
 
-# Sitemap
-Sitemap: https://trofeosarte.com/sitemap.xml
-
-# Block access to admin areas (if any)
-Disallow: /admin/
-Disallow: /_next/
-Disallow: /api/
-
-# Allow search engines to crawl images
-User-agent: Googlebot-Image
-Allow: /images/
-
-# Crawl delay (optional)
-Crawl-delay: 1
+Sitemap: https://rolandomacouzet.com/trofeosarte/sitemap.xml

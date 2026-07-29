@@ -4,21 +4,21 @@ import { useState, useRef } from "react"
 import CarouselArrows from "@/components/carousel-arrows"
 
 const portfolioImages = [
-  { src: "/images/53.png", alt: "Trofeo artístico de golf en bronce hecho a mano" },
-  { src: "/images/54.png", alt: "Trofeo familiar en piedra para torneos deportivos" },
-  { src: "/images/55.png", alt: "Trofeo cultural con palos de golf cruzados" },
-  { src: "/images/56.png", alt: "Trofeo de equipo en bronce para golf" },
-  { src: "/images/57.png", alt: "Trofeo de celebración deportiva en equipo" },
-  { src: "/images/58.png", alt: "Trofeos institucionales Universidad Montrer" },
-  { src: "/images/59.png", alt: "Figura de victoria dinámica en bronce" },
-  { src: "/images/60.png", alt: "Trofeo clásico de palos de golf cruzados" },
-  { src: "/images/61.png", alt: "Trofeo geométrico de raquetas de pádel" },
-  { src: "/images/62.png", alt: "Trofeo tradicional de raquetas de pádel" },
-  { src: "/images/67.png", alt: "Trofeos de podio para golf - 1er, 2do y 3er lugar" },
-  { src: "/images/63.png", alt: "Trofeo moderno de ciclismo artístico" },
-  { src: "/images/64.png", alt: "Figura dinámica corriendo en bronce" },
-  { src: "/images/65.png", alt: "Trofeo de celebración de victoria en tenis" },
-  { src: "/images/66.png", alt: "Jugador de tenis en acción - trofeo dinámico" },
+  { src: "/trofeosarte/images/53.png", alt: "Trofeo artístico de golf en bronce hecho a mano" },
+  { src: "/trofeosarte/images/54.png", alt: "Trofeo familiar en piedra para torneos deportivos" },
+  { src: "/trofeosarte/images/55.png", alt: "Trofeo cultural con palos de golf cruzados" },
+  { src: "/trofeosarte/images/56.png", alt: "Trofeo de equipo en bronce para golf" },
+  { src: "/trofeosarte/images/57.png", alt: "Trofeo de celebración deportiva en equipo" },
+  { src: "/trofeosarte/images/58.png", alt: "Trofeos institucionales Universidad Montrer" },
+  { src: "/trofeosarte/images/59.png", alt: "Figura de victoria dinámica en bronce" },
+  { src: "/trofeosarte/images/60.png", alt: "Trofeo clásico de palos de golf cruzados" },
+  { src: "/trofeosarte/images/61.png", alt: "Trofeo geométrico de raquetas de pádel" },
+  { src: "/trofeosarte/images/62.png", alt: "Trofeo tradicional de raquetas de pádel" },
+  { src: "/trofeosarte/images/67.png", alt: "Trofeos de podio para golf - 1er, 2do y 3er lugar" },
+  { src: "/trofeosarte/images/63.png", alt: "Trofeo moderno de ciclismo artístico" },
+  { src: "/trofeosarte/images/64.png", alt: "Figura dinámica corriendo en bronce" },
+  { src: "/trofeosarte/images/65.png", alt: "Trofeo de celebración de victoria en tenis" },
+  { src: "/trofeosarte/images/66.png", alt: "Jugador de tenis en acción - trofeo dinámico" },
 ]
 
 export default function MobilePortfolioGallery() {

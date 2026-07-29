@@ -13,6 +13,18 @@ import MobileMenu from "@/components/mobile-menu"
 
 export default function HomePage() {
   const [activeSection, setActiveSection] = useState("hero")
+  const [emailCopied, setEmailCopied] = useState(false)
+
+  const handleCopyEmail = async () => {
+    try {
+      await navigator.clipboard.writeText("contacto@rolandomacouzet.com")
+      setEmailCopied(true)
+      setTimeout(() => setEmailCopied(false), 2500)
+    } catch {
+      // Si el navegador no permite copiar, abrimos el correo como respaldo.
+      window.location.href = "mailto:contacto@rolandomacouzet.com"
+    }
+  }
   const heroCarouselRef = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
@@ -46,7 +58,9 @@ export default function HomePage() {
   }, [])
 
   const handleCalendlyClick = () => {
-    window.open("https://calendly.com/rmartistaplastico", "_blank")
+    // Calendly quedó desconectado; agendar se hace directo por WhatsApp.
+    const message = "Hola, me gustaría agendar una llamada para un trofeo personalizado"
+    window.open(`https://wa.me/5214433735374?text=${encodeURIComponent(message)}`, "_blank")
   }
 
   const handleWhatsAppClick = () => {
@@ -80,7 +94,7 @@ export default function HomePage() {
             <div className="flex-shrink-0">
               <a href="#hero" className="cursor-pointer" aria-label="Ir al inicio">
                 <Image
-                  src="/images/logotrofeosarte.png"
+                  src="/trofeosarte/images/logotrofeosarte.png"
                   alt="Logo de Trofeos Arte - trofeos personalizados en México"
                   width={300}
                   height={120}
@@ -155,7 +169,7 @@ export default function HomePage() {
                 </li>
                 <li>
                   <a
-                    href="/faq"
+                    href="/trofeosarte/faq"
                     className="hover:text-[#446047] transition-colors font-normal whitespace-nowrap"
                     aria-label="Ir a Preguntas Frecuentes"
                   >
@@ -211,7 +225,7 @@ export default function HomePage() {
                 <div ref={heroCarouselRef} className="flex overflow-x-auto space-x-4 pb-4 scrollbar-hide">
                   <div className="flex-shrink-0 w-64 aspect-[3/4] rounded-lg overflow-hidden">
                     <img
-                      src="/images/trofeo-artistico-torneo-golf-escultura-bronce-mano-pelota.png"
+                      src="/trofeosarte/images/trofeo-artistico-torneo-golf-escultura-bronce-mano-pelota.png"
                       alt="Trofeo artístico para torneo de golf"
                       className="w-full h-full object-cover"
                       loading="eager"
@@ -219,7 +233,7 @@ export default function HomePage() {
                   </div>
                   <div className="flex-shrink-0 w-64 aspect-[3/4] rounded-lg overflow-hidden">
                     <img
-                      src="/images/escultura-artistica-golfistas-bronce-trofeos-personalizados.png"
+                      src="/trofeosarte/images/escultura-artistica-golfistas-bronce-trofeos-personalizados.png"
                       alt="Galería de trofeos de golf hechos a mano"
                       className="w-full h-full object-cover"
                       loading="eager"
@@ -227,7 +241,7 @@ export default function HomePage() {
                   </div>
                   <div className="flex-shrink-0 w-64 aspect-[3/4] rounded-lg overflow-hidden">
                     <img
-                      src="/images/trofeo-artistico-tenis-padel-premio-exclusivo.png"
+                      src="/trofeosarte/images/trofeo-artistico-tenis-padel-premio-exclusivo.png"
                       alt="Trofeo artístico para torneo de pádel y tenis"
                       className="w-full h-full object-cover"
                       loading="eager"
@@ -260,7 +274,7 @@ export default function HomePage() {
                 <div className="flex items-start justify-center">
                   <div className="w-full aspect-[3/4] rounded-lg overflow-hidden">
                     <img
-                      src="/images/trofeo-artistico-torneo-golf-escultura-bronce-mano-pelota.png"
+                      src="/trofeosarte/images/trofeo-artistico-torneo-golf-escultura-bronce-mano-pelota.png"
                       alt="Trofeo artístico para torneo de golf"
                       className="w-full h-full object-cover"
                       loading="eager"
@@ -272,7 +286,7 @@ export default function HomePage() {
                 <div className="flex items-start justify-center">
                   <div className="w-full aspect-[3/4] rounded-lg overflow-hidden">
                     <img
-                      src="/images/escultura-artistica-golfistas-bronce-trofeos-personalizados.png"
+                      src="/trofeosarte/images/escultura-artistica-golfistas-bronce-trofeos-personalizados.png"
                       alt="Galería de trofeos de golf hechos a mano"
                       className="w-full h-full object-cover"
                       loading="eager"
@@ -299,7 +313,7 @@ export default function HomePage() {
                 <div className="flex items-start justify-center">
                   <div className="w-full aspect-[3/4] rounded-lg overflow-hidden">
                     <img
-                      src="/images/trofeo-artistico-tenis-padel-premio-exclusivo.png"
+                      src="/trofeosarte/images/trofeo-artistico-tenis-padel-premio-exclusivo.png"
                       alt="Trofeo artístico para torneo de pádel y tenis"
                       className="w-full h-full object-cover"
                       loading="eager"
@@ -311,7 +325,7 @@ export default function HomePage() {
               {/* Icons - Desktop Only */}
               <div className="text-center mb-4">
                 <img
-                  src="/images/iconos3.png"
+                  src="/trofeosarte/images/iconos3.png"
                   alt="Iconos deportivos - golf, tenis, pádel para trofeos personalizados"
                   className="h-12 mx-auto"
                   loading="lazy"
@@ -514,12 +528,12 @@ export default function HomePage() {
                     <div className="aspect-square bg-gray-200 rounded-lg mb-4 overflow-hidden">
                       <img
                         src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/copa.png-RTictUeTgugJ3BcJrH2K5edw5bMzkv.jpeg"
-                        alt="Copa Morelos - Trofeo insignia personalizado para torneo anual de golf México"
+                        alt="Copa Morelia - Trofeo insignia personalizado para torneo anual de golf México"
                         className="w-full h-full object-cover"
                         loading="lazy"
                       />
                     </div>
-                    <h3 className="text-xl font-bold text-black mb-2">Copa Morelos</h3>
+                    <h3 className="text-xl font-bold text-black mb-2">Copa Morelia</h3>
                     <p className="text-gray-600">Torneo anual de golf</p>
                   </CardContent>
                 </Card>
@@ -578,69 +592,69 @@ export default function HomePage() {
             <div className="hidden lg:grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 md:gap-6 mb-12">
               {[
                 {
-                  src: "/images/53.png",
+                  src: "/trofeosarte/images/53.png",
                   alt: "Trofeo artístico de mano en bronce para golf - Premio personalizado clubes deportivos México",
                 },
                 {
-                  src: "/images/54.png",
+                  src: "/trofeosarte/images/54.png",
                   alt: "Trofeo familiar en piedra - Premio único para torneos familiares deportivos",
                 },
                 {
-                  src: "/images/55.png",
+                  src: "/trofeosarte/images/55.png",
                   alt: "Trofeo cultural con palos de golf cruzados - Premio torneo cultural deportivo",
                 },
                 {
-                  src: "/images/56.png",
+                  src: "/trofeosarte/images/56.png",
                   alt: "Trofeo de equipo en bronce para golf - Premio grupal personalizado clubes México",
                 },
                 {
-                  src: "/images/57.png",
+                  src: "/trofeosarte/images/57.png",
                   alt: "Trofeo de celebración en equipo - Premio para torneos deportivos México",
                 },
                 {
-                  src: "/images/58.png",
+                  src: "/trofeosarte/images/58.png",
                   alt: "Trofeos Universidad Montrer con pantera - Premios institucionales deportivos",
                 },
                 {
-                  src: "/images/59.png",
+                  src: "/trofeosarte/images/59.png",
                   alt: "Figura de victoria dinámica en bronce - Trofeo deportivo artístico México",
                 },
                 {
-                  src: "/images/60.png",
+                  src: "/trofeosarte/images/60.png",
                   alt: "Trofeo de palos de golf cruzados - Premio clásico para golf clubes deportivos",
                 },
                 {
-                  src: "/images/61.png",
+                  src: "/trofeosarte/images/61.png",
                   alt: "Trofeo geométrico de raquetas de pádel - Premio moderno pádel México",
                 },
                 {
-                  src: "/images/62.png",
+                  src: "/trofeosarte/images/62.png",
                   alt: "Trofeo de raquetas de pádel cruzadas - Premio tradicional pádel deportivo",
                 },
                 {
-                  src: "/images/67.png",
+                  src: "/trofeosarte/images/67.png",
                   alt: "Trofeos de podio en bronce para golf - Premios 1er, 2do y 3er lugar torneos",
                 },
                 {
-                  src: "/images/63.png",
+                  src: "/trofeosarte/images/63.png",
                   alt: "Trofeo moderno de ciclismo - Escultura artística para ciclismo deportivo México",
                 },
                 {
-                  src: "/images/64.png",
+                  src: "/trofeosarte/images/64.png",
                   alt: "Figura dinámica corriendo en bronce - Trofeo para atletismo deportivo",
                 },
                 {
-                  src: "/images/65.png",
+                  src: "/trofeosarte/images/65.png",
                   alt: "Trofeo de celebración de victoria en tenis - Premio artístico tenis México",
                 },
                 {
-                  src: "/images/66.png",
+                  src: "/trofeosarte/images/66.png",
                   alt: "Jugador de tenis en acción - Trofeo dinámico para tenis clubes deportivos",
                 },
               ].map((trophy, index) => (
                 <div key={index} className="aspect-square bg-gray-200 rounded-lg overflow-hidden portfolio-image">
                   <img
-                    src={trophy.src || "/placeholder.svg"}
+                    src={trophy.src || "/trofeosarte/placeholder.svg"}
                     alt={trophy.alt}
                     className="w-full h-full object-cover"
                     loading="lazy"
@@ -663,21 +677,21 @@ export default function HomePage() {
                   title: "Athletic Grace",
                   size: "50 x 70 cm",
                   description: "Una representación dinámica del movimiento atlético en colores vibrantes",
-                  image: "/images/20.png",
+                  image: "/trofeosarte/images/20.png",
                   alt: "Pintura al óleo Athletic Grace - Arte deportivo con espátula 50x70cm México",
                 },
                 {
                   title: "Pelican's Serenity",
                   size: "45 x 60 cm",
                   description: "La elegancia natural capturada en expresivos trazos de espátula",
-                  image: "/images/21.png",
+                  image: "/trofeosarte/images/21.png",
                   alt: "Pintura al óleo Pelican's Serenity - Arte con espátula 45x60cm México",
                 },
                 {
                   title: "Golf Passion",
                   size: "55 x 75 cm",
                   description: "La energía y concentración del swing perfecto en colores intensos",
-                  image: "/images/22.png",
+                  image: "/trofeosarte/images/22.png",
                   alt: "Pintura al óleo Golf Passion - Arte deportivo golf con espátula 55x75cm México",
                 },
               ].map((artwork, index) => (
@@ -685,7 +699,7 @@ export default function HomePage() {
                   <CardContent className="p-6">
                     <div className="aspect-[3/4] bg-gray-200 rounded-lg mb-4 overflow-hidden">
                       <img
-                        src={artwork.image || "/placeholder.svg"}
+                        src={artwork.image || "/trofeosarte/placeholder.svg"}
                         alt={artwork.alt}
                         className="w-full h-full object-cover"
                         loading="lazy"
@@ -705,7 +719,7 @@ export default function HomePage() {
                 únicos para torneos, exhibiciones o rifas en clubes deportivos de México.
               </p>
               <Button
-                onClick={() => window.open("https://rmacouzet.art/home", "_blank")}
+                onClick={() => window.open("https://rolandomacouzet.com", "_blank")}
                 className="bg-[#446047] hover:bg-[#446047]/90 text-white px-8 py-3 text-lg font-medium rounded-full"
                 aria-label="Conocer más sobre el artista - Visitar portafolio personal"
               >
@@ -723,69 +737,48 @@ export default function HomePage() {
             <h2 className="text-3xl lg:text-4xl font-bold text-black mb-12 text-center">Contáctanos</h2>
 
             <div className="grid lg:grid-cols-2 gap-12">
-              {/* Contact Form */}
+              {/* Contacto directo */}
               <div>
-                <h3 className="text-xl font-bold text-black mb-6">Envíanos un mensaje</h3>
-                <form
-                  action="https://formspree.io/f/xwpqlpan"
-                  method="POST"
-                  className="space-y-4"
-                  role="form"
-                  aria-label="Formulario de contacto para trofeos personalizados"
-                >
-                  <div>
-                    <label htmlFor="name" className="block text-sm font-medium text-black mb-2">
-                      Nombre
-                    </label>
-                    <input
-                      type="text"
-                      id="name"
-                      name="name"
-                      required
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#446047] focus:border-transparent"
-                      aria-describedby="name-help"
-                    />
-                  </div>
-                  <div>
-                    <label htmlFor="email" className="block text-sm font-medium text-black mb-2">
-                      Correo electrónico
-                    </label>
-                    <input
-                      type="email"
-                      id="email"
-                      name="email"
-                      required
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#446047] focus:border-transparent"
-                      aria-describedby="email-help"
-                    />
-                  </div>
-                  <div>
-                    <label htmlFor="message" className="block text-sm font-medium text-black mb-2">
-                      Mensaje
-                    </label>
-                    <textarea
-                      id="message"
-                      name="message"
-                      rows={4}
-                      required
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#446047] focus:border-transparent"
-                      aria-describedby="message-help"
-                    ></textarea>
-                  </div>
-                  <Button
-                    type="submit"
-                    className="w-full bg-[#446047] hover:bg-[#446047]/90 text-white py-3"
-                    aria-label="Enviar mensaje de contacto para trofeos personalizados"
+                <h3 className="text-xl font-bold text-black mb-6">Escríbenos directo</h3>
+                <div className="space-y-4">
+                  <a
+                    href={`https://wa.me/5214433735374?text=${encodeURIComponent("Hola, me interesa un trofeo personalizado para mi club o torneo")}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-4 p-6 border border-gray-300 rounded-lg hover:border-[#446047] hover:bg-[#446047]/5 transition-colors"
+                    aria-label="Escribir por WhatsApp para trofeos personalizados"
                   >
-                    Enviar mensaje
-                  </Button>
-                </form>
-
-                {/* Success Message - This will be shown by Formspree after successful submission */}
-                <div id="form-success" className="hidden mt-4 p-4 bg-green-50 border border-green-200 rounded-lg">
-                  <p className="text-green-800 text-center">
-                    ¡Gracias por tu mensaje! Nos pondremos en contacto contigo pronto.
-                  </p>
+                    <svg viewBox="0 0 24 24" className="w-10 h-10 shrink-0" fill="#25D366" aria-hidden="true">
+                      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+                    </svg>
+                    <div>
+                      <p className="font-bold text-black">WhatsApp</p>
+                      <p className="text-black">+52 443 373 5374</p>
+                      <p className="text-sm text-gray-600">La forma más rápida de recibir respuesta</p>
+                    </div>
+                  </a>
+                  <button
+                    type="button"
+                    onClick={handleCopyEmail}
+                    className="w-full text-left flex items-center gap-4 p-6 border border-gray-300 rounded-lg hover:border-[#446047] hover:bg-[#446047]/5 transition-colors cursor-copy"
+                    aria-label="Copiar dirección de correo para trofeos personalizados"
+                  >
+                    <svg viewBox="0 0 24 24" className="w-10 h-10 shrink-0" fill="none" stroke="#446047" strokeWidth="1.5" aria-hidden="true">
+                      <rect x="2" y="4" width="20" height="16" rx="2" />
+                      <path d="m2 7 10 6 10-6" />
+                    </svg>
+                    <div>
+                      <p className="font-bold text-black">Correo</p>
+                      <p className="text-black">contacto@rolandomacouzet.com</p>
+                      {emailCopied ? (
+                        <p className="text-sm font-medium text-[#446047]" role="status">
+                          ¡Copiado! ✓
+                        </p>
+                      ) : (
+                        <p className="text-sm text-gray-600">Clic para copiar la dirección</p>
+                      )}
+                    </div>
+                  </button>
                 </div>
               </div>
 
@@ -822,7 +815,7 @@ export default function HomePage() {
             <div className="grid md:grid-cols-3 gap-8">
               <div>
                 <Image
-                  src="/images/logotrofeosarte.png"
+                  src="/trofeosarte/images/logotrofeosarte.png"
                   alt="Logo de Trofeos Arte - trofeos personalizados en México"
                   width={200}
                   height={80}
@@ -883,7 +876,7 @@ export default function HomePage() {
                     </a>
                   </li>
                   <li>
-                    <a href="/faq" className="hover:text-white transition-colors cursor-pointer">
+                    <a href="/trofeosarte/faq" className="hover:text-white transition-colors cursor-pointer">
                       FAQ
                     </a>
                   </li>
@@ -904,7 +897,7 @@ export default function HomePage() {
               <div>
                 <h4 className="font-bold mb-4">Contacto</h4>
                 <p className="text-gray-200">
-                  <strong>Email:</strong> rmartistaplastico@gmail.com
+                  <strong>Email:</strong> contacto@rolandomacouzet.com
                 </p>
               </div>
             </div>

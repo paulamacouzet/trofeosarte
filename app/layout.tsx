@@ -1,23 +1,28 @@
 import type React from "react"
 import type { Metadata } from "next"
 import { Inter } from "next/font/google"
+import Script from "next/script"
 import "./globals.css"
+
+// El sitio es estático: cambiar NEXT_PUBLIC_GA_ID en Vercel requiere un redeploy para surtir efecto.
+const GA_ID = process.env.NEXT_PUBLIC_GA_ID
 
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: "Trofeos Personalizados para Clubes en México | Trofeos Arte",
+  metadataBase: new URL("https://rolandomacouzet.com"),
+  title: "Trofeos Personalizados para Clubes de Golf y Pádel en México | Trofeos Arte",
   description:
     "Diseñamos trofeos artísticos únicos para clubes de golf, pádel y tenis en México. Fabricados a mano por el artista Rolando Macouzet. Envíos a todo el país.",
   keywords:
-    "trofeos personalizados, trofeos de golf, trofeos de pádel, trofeos de tenis, trofeos artísticos, clubes deportivos México, arte deportivo, esculturas personalizadas",
+    "trofeos personalizados, trofeos de golf, trofeos de pádel, trofeos de tenis, trofeos artísticos, trofeos para torneos de golf, clubes deportivos México, arte deportivo, esculturas personalizadas",
   authors: [{ name: "Trofeos Arte - Rolando Macouzet" }],
   openGraph: {
     title: "Trofeos Arte - Arte que honra la grandeza",
     description: "Trofeos artísticos personalizados para clubes y torneos deportivos en México.",
     images: [
       {
-        url: "/images/trofeo-artistico-torneo-golf-escultura-bronce-mano-pelota.png",
+        url: "/trofeosarte/images/trofeo-artistico-torneo-golf-escultura-bronce-mano-pelota.png",
         width: 1200,
         height: 630,
         alt: "Trofeo artístico de golf en bronce para clubes deportivos en México",
@@ -26,13 +31,13 @@ export const metadata: Metadata = {
     locale: "es_MX",
     type: "website",
     siteName: "Trofeos Arte",
-    url: "https://trofeosarte.com",
+    url: "https://rolandomacouzet.com/trofeosarte",
   },
   twitter: {
     card: "summary_large_image",
     title: "Trofeos Arte - Arte que honra la grandeza",
     description: "Trofeos artísticos personalizados para clubes y torneos deportivos en México.",
-    images: ["/images/trofeo-artistico-torneo-golf-escultura-bronce-mano-pelota.png"],
+    images: ["/trofeosarte/images/trofeo-artistico-torneo-golf-escultura-bronce-mano-pelota.png"],
   },
   robots: {
     index: true,
@@ -46,17 +51,13 @@ export const metadata: Metadata = {
     },
   },
   alternates: {
-    canonical: "https://trofeosarte.com",
+    canonical: "https://rolandomacouzet.com/trofeosarte",
   },
   icons: {
-    icon: "/favicon.png",
-    shortcut: "/favicon.png",
-    apple: "/favicon.png",
+    icon: "/trofeosarte/favicon.png",
+    shortcut: "/trofeosarte/favicon.png",
+    apple: "/trofeosarte/favicon.png",
   },
-  verification: {
-    google: "tu-codigo-verificacion-google-aqui",
-  },
-    generator: 'v0.dev'
 }
 
 export default function RootLayout({
@@ -67,51 +68,10 @@ export default function RootLayout({
   return (
     <html lang="es-MX">
       <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta
-          name="description"
-          content="Diseñamos trofeos artísticos únicos para clubes de golf, pádel y tenis en México. Fabricados a mano por el artista Rolando Macouzet. Envíos a todo el país."
-        />
-        <meta
-          name="keywords"
-          content="trofeos personalizados, trofeos de golf, trofeos de pádel, trofeos de tenis, trofeos artísticos, clubes deportivos México, arte deportivo, esculturas personalizadas"
-        />
-        <meta name="robots" content="index, follow" />
-        <meta name="author" content="Trofeos Arte - Rolando Macouzet" />
-        <meta name="geo.region" content="MX" />
-        <meta name="geo.placename" content="México" />
+        <meta name="geo.region" content="MX-MIC" />
+        <meta name="geo.placename" content="Morelia, Michoacán, México" />
         <meta name="geo.position" content="19.7006;-101.1844" />
         <meta name="ICBM" content="19.7006, -101.1844" />
-
-        {/* Open Graph Tags */}
-        <meta property="og:title" content="Trofeos Arte - Arte que honra la grandeza" />
-        <meta
-          property="og:description"
-          content="Trofeos artísticos personalizados para clubes y torneos deportivos en México."
-        />
-        <meta
-          property="og:image"
-          content="https://trofeosarte.com/images/trofeo-artistico-torneo-golf-escultura-bronce-mano-pelota.png"
-        />
-        <meta property="og:url" content="https://trofeosarte.com" />
-        <meta property="og:type" content="website" />
-        <meta property="og:site_name" content="Trofeos Arte" />
-        <meta property="og:locale" content="es_MX" />
-
-        {/* Twitter Card Tags */}
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Trofeos Arte - Arte que honra la grandeza" />
-        <meta
-          name="twitter:description"
-          content="Trofeos artísticos personalizados para clubes y torneos deportivos en México."
-        />
-        <meta
-          name="twitter:image"
-          content="https://trofeosarte.com/images/trofeo-artistico-torneo-golf-escultura-bronce-mano-pelota.png"
-        />
-
-        <link rel="canonical" href="https://trofeosarte.com" />
-        <link rel="icon" href="/favicon.png" />
 
         {/* Structured Data */}
         <script
@@ -122,9 +82,10 @@ export default function RootLayout({
               "@type": "LocalBusiness",
               name: "Trofeos Arte",
               description: "Trofeos artísticos exclusivos para clubes deportivos y torneos en México",
-              url: "https://trofeosarte.com",
-              telephone: "+52-443-123-4567",
-              email: "rmartistaplastico@gmail.com",
+              url: "https://rolandomacouzet.com/trofeosarte",
+              image: "https://rolandomacouzet.com/trofeosarte/images/trofeo-artistico-torneo-golf-escultura-bronce-mano-pelota.png",
+              telephone: "+52-443-373-5374",
+              email: "contacto@rolandomacouzet.com",
               founder: {
                 "@type": "Person",
                 name: "Rolando Macouzet",
@@ -154,7 +115,7 @@ export default function RootLayout({
               ],
               serviceType: "Trofeos artísticos personalizados y esculturas deportivas",
               priceRange: "$$",
-              sameAs: ["https://rmacouzet.art/home"],
+              sameAs: ["https://rolandomacouzet.com"],
               hasOfferCatalog: {
                 "@type": "OfferCatalog",
                 name: "Servicios de Trofeos",
@@ -181,7 +142,20 @@ export default function RootLayout({
           }}
         />
       </head>
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        {children}
+        {GA_ID && (
+          <>
+            <Script src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`} strategy="afterInteractive" />
+            <Script id="ga4-init" strategy="afterInteractive">
+              {`window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments);}
+                gtag('js', new Date());
+                gtag('config', '${GA_ID}');`}
+            </Script>
+          </>
+        )}
+      </body>
     </html>
   )
 }

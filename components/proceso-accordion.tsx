@@ -10,7 +10,7 @@ const processSteps = [
     title: "Reunión Creativa",
     description:
       "Entendemos tu visión y objetivos del torneo para crear un concepto único que represente la esencia de tu club. Trofeos a partir de 1,200 MXN.",
-    image: "/images/diseno-personalizado-trofeos-club-golf-proceso-creativo.png",
+    image: "/trofeosarte/images/diseno-personalizado-trofeos-club-golf-proceso-creativo.png",
     alt: "Proceso creativo de diseño de trofeos personalizados",
   },
   {
@@ -18,21 +18,21 @@ const processSteps = [
     title: "Diseño Conceptual",
     description:
       "El artista crea bocetos únicos y presentamos propuestas visuales que capturan la identidad de tu torneo. En esta etapa obtendrás una cotización formal según la elección del diseño y la cantidad.",
-    image: "/images/bocetos-disenos-conceptuales-trofeos-personalizados.png",
+    image: "/trofeosarte/images/bocetos-disenos-conceptuales-trofeos-personalizados.png",
     alt: "Bocetos y diseños conceptuales de trofeos artísticos",
   },
   {
     number: "03",
     title: "Producción Artística",
     description: "Fabricamos con materiales premium y técnicas artesanales para garantizar la máxima calidad.",
-    image: "/images/produccion-artesanal-trofeos-materiales-premium.png",
+    image: "/trofeosarte/images/produccion-artesanal-trofeos-materiales-premium.png",
     alt: "Producción artesanal de trofeos con materiales premium",
   },
   {
     number: "04",
     title: "Entrega Exclusiva",
     description: "Presentamos tu trofeo insignia con el cuidado y ceremonia que merece una pieza de arte.",
-    image: "/images/entrega-ceremonial-trofeos-exclusivos-presentacion.png",
+    image: "/trofeosarte/images/entrega-ceremonial-trofeos-exclusivos-presentacion.png",
     alt: "Entrega ceremonial de trofeos exclusivos personalizados",
   },
 ]

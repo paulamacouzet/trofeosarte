@@ -6,53 +6,8 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import WhatsAppBubble from "@/components/whatsapp-bubble"
 import MobileMenu from "@/components/mobile-menu"
+import { faqData } from "./faq-data"
 
-const faqData = [
-  {
-    question: "¿Hacen envíos a toda la República Mexicana?",
-    answer:
-      "Sí, enviamos nuestros trofeos personalizados a cualquier ciudad de México. El envío tiene costo extra que será agregado a la cotización.",
-  },
-  {
-    question: "¿Qué tipo de clubes contratan sus servicios?",
-    answer:
-      "Trabajamos con clubes deportivos de golf, pádel y tenis de alto nivel en México, incluyendo CDMX, San Miguel de Allende, Querétaro, Cancún, Los Cabos, Monterrey, Guadalajara, entre otros.",
-  },
-  {
-    question: "¿Cuál es el tiempo de producción de un trofeo?",
-    answer:
-      "Depende del diseño y la cantidad. En promedio, el proceso completo (diseño, aprobación, producción y entrega) toma de 3 a 4 meses.",
-  },
-  {
-    question: "¿Hay pedido mínimo de trofeos?",
-    answer:
-      "No. Podemos realizar desde una sola pieza. Sin embargo, el costo unitario disminuye con mayores cantidades. Fabricamos hasta 200 piezas para un solo torneo.",
-  },
-  {
-    question: "¿Puede ser personalizado?",
-    answer:
-      "Sí. Todos los trofeos son personalizados. Durante la llamada creativa, nos compartirás la visión y valores de tu club para crear un diseño único y representativo.",
-  },
-  {
-    question: "¿El envío está incluido?",
-    answer: "No. El envío se cotiza por separado, según el peso, volumen y destino final del pedido.",
-  },
-  {
-    question: "¿Puedo solicitar un diseño urgente?",
-    answer:
-      "En casos especiales, ofrecemos entregas en tiempos más cortos con costos adicionales. Especifica tu urgencia al agendar tu llamada para revisar viabilidad.",
-  },
-  {
-    question: "¿Se pueden hacer trofeos de disciplinas diferentes al golf, pádel o tenis?",
-    answer:
-      "Sí. Podemos desarrollar trofeos artísticos para cualquier disciplina deportiva o temática especial. También realizamos esculturas conmemorativas o piezas únicas como premios simbólicos.",
-  },
-  {
-    question: "¿Puedo pedir una pintura en lugar de un trofeo?",
-    answer:
-      "Sí. También ofrecemos piezas únicas como pinturas al óleo con temática deportiva que pueden ser utilizadas como premios especiales para exhibiciones o rifas.",
-  },
-]
 
 export default function FAQPage() {
   const [openIndex, setOpenIndex] = useState<number | null>(null)
@@ -63,29 +18,6 @@ export default function FAQPage() {
 
   return (
     <>
-      <head>
-        <title>Preguntas Frecuentes | Trofeos Arte - Trofeos personalizados</title>
-        <meta
-          name="description"
-          content="Resuelve tus dudas sobre diseño, envíos y producción de trofeos artísticos para tu club o torneo en México."
-        />
-        <meta
-          name="keywords"
-          content="preguntas frecuentes trofeos, FAQ trofeos personalizados, dudas trofeos artísticos México, información clubes deportivos, envíos trofeos México"
-        />
-        <link rel="canonical" href="https://trofeosarte.com/faq" />
-
-        {/* Open Graph Tags */}
-        <meta property="og:title" content="Preguntas Frecuentes | Trofeos Arte - Trofeos personalizados" />
-        <meta
-          property="og:description"
-          content="Resuelve tus dudas sobre diseño, envíos y producción de trofeos artísticos para tu club o torneo en México."
-        />
-        <meta property="og:url" content="https://trofeosarte.com/faq" />
-        <meta property="og:type" content="website" />
-        <meta property="og:locale" content="es_MX" />
-      </head>
-
       <div className="min-h-screen bg-[#f6f2e7]">
         {/* Header */}
         <header className="sticky top-0 bg-[#f6f2e7] z-50 border-b border-gray-200">
@@ -93,9 +25,9 @@ export default function FAQPage() {
             <nav className="flex items-center">
               {/* Logo - Fixed Left */}
               <div className="flex-shrink-0">
-                <a href="/" className="cursor-pointer">
+                <a href="/trofeosarte" className="cursor-pointer">
                   <Image
-                    src="/images/logotrofeosarte.png"
+                    src="/trofeosarte/images/logotrofeosarte.png"
                     alt="Logo de Trofeos Arte - trofeos personalizados en México"
                     width={300}
                     height={120}
@@ -109,7 +41,7 @@ export default function FAQPage() {
                 <ul className="hidden md:flex items-center space-x-8 text-black">
                   <li>
                     <a
-                      href="/#nosotros"
+                      href="/trofeosarte/#nosotros"
                       className="hover:text-[#446047] transition-colors font-normal whitespace-nowrap"
                     >
                       Nosotros
@@ -117,7 +49,7 @@ export default function FAQPage() {
                   </li>
                   <li>
                     <a
-                      href="/#servicios"
+                      href="/trofeosarte/#servicios"
                       className="hover:text-[#446047] transition-colors font-normal whitespace-nowrap"
                     >
                       Servicios
@@ -125,7 +57,7 @@ export default function FAQPage() {
                   </li>
                   <li>
                     <a
-                      href="/#portafolio"
+                      href="/trofeosarte/#portafolio"
                       className="hover:text-[#446047] transition-colors font-normal whitespace-nowrap"
                     >
                       Portafolio
@@ -133,20 +65,20 @@ export default function FAQPage() {
                   </li>
                   <li>
                     <a
-                      href="/#mas-arte"
+                      href="/trofeosarte/#mas-arte"
                       className="hover:text-[#446047] transition-colors font-normal whitespace-nowrap"
                     >
                       Más Arte
                     </a>
                   </li>
                   <li>
-                    <a href="/faq" className="hover:text-[#446047] transition-colors font-bold whitespace-nowrap">
+                    <a href="/trofeosarte/faq" className="hover:text-[#446047] transition-colors font-bold whitespace-nowrap">
                       FAQ
                     </a>
                   </li>
                   <li>
                     <a
-                      href="/#contact"
+                      href="/trofeosarte/#contact"
                       className="hover:text-[#446047] transition-colors font-normal whitespace-nowrap"
                     >
                       Contacto
@@ -211,13 +143,13 @@ export default function FAQPage() {
                 <p className="text-lg text-black mb-6">¿Tienes más preguntas sobre nuestros trofeos personalizados?</p>
                 <div className="space-y-4 sm:space-y-0 sm:space-x-4 sm:flex sm:justify-center">
                   <Button
-                    onClick={() => window.open("https://calendly.com/rmartistaplastico", "_blank")}
+                    onClick={() => window.open("https://wa.me/5214433735374?text=" + encodeURIComponent("Hola, me gustaría agendar una llamada para un trofeo personalizado"), "_blank")}
                     className="bg-[#446047] hover:bg-[#446047]/90 text-white px-8 py-3 text-lg font-medium rounded-full"
                   >
                     Agendar una llamada
                   </Button>
                   <Button
-                    onClick={() => (window.location.href = "/#contact")}
+                    onClick={() => (window.location.href = "/trofeosarte/#contact")}
                     variant="outline"
                     className="border-[#446047] text-[#446047] hover:bg-[#446047] hover:text-white px-8 py-3 text-lg font-medium rounded-full"
                   >
@@ -236,7 +168,7 @@ export default function FAQPage() {
               <div className="grid md:grid-cols-3 gap-8">
                 <div>
                   <Image
-                    src="/images/logotrofeosarte.png"
+                    src="/trofeosarte/images/logotrofeosarte.png"
                     alt="Logo de Trofeos Arte - trofeos personalizados en México"
                     width={200}
                     height={80}
@@ -248,32 +180,32 @@ export default function FAQPage() {
                   <h4 className="font-bold mb-4">Navegación</h4>
                   <ul className="space-y-2 text-gray-200">
                     <li>
-                      <a href="/#nosotros" className="hover:text-white transition-colors">
+                      <a href="/trofeosarte/#nosotros" className="hover:text-white transition-colors">
                         Nosotros
                       </a>
                     </li>
                     <li>
-                      <a href="/#servicios" className="hover:text-white transition-colors">
+                      <a href="/trofeosarte/#servicios" className="hover:text-white transition-colors">
                         Servicios
                       </a>
                     </li>
                     <li>
-                      <a href="/#portafolio" className="hover:text-white transition-colors">
+                      <a href="/trofeosarte/#portafolio" className="hover:text-white transition-colors">
                         Portafolio
                       </a>
                     </li>
                     <li>
-                      <a href="/#mas-arte" className="hover:text-white transition-colors">
+                      <a href="/trofeosarte/#mas-arte" className="hover:text-white transition-colors">
                         Más Arte
                       </a>
                     </li>
                     <li>
-                      <a href="/faq" className="hover:text-white transition-colors">
+                      <a href="/trofeosarte/faq" className="hover:text-white transition-colors">
                         FAQ
                       </a>
                     </li>
                     <li>
-                      <a href="/#contact" className="hover:text-white transition-colors">
+                      <a href="/trofeosarte/#contact" className="hover:text-white transition-colors">
                         Contacto
                       </a>
                     </li>
@@ -282,7 +214,7 @@ export default function FAQPage() {
                 <div>
                   <h4 className="font-bold mb-4">Contacto</h4>
                   <p className="text-gray-200">
-                    <strong>Email:</strong> rmartistaplastico@gmail.com
+                    <strong>Email:</strong> contacto@rolandomacouzet.com
                   </p>
                 </div>
               </div>

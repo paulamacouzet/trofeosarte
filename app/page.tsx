@@ -13,6 +13,18 @@ import MobileMenu from "@/components/mobile-menu"
 
 export default function HomePage() {
   const [activeSection, setActiveSection] = useState("hero")
+  const [emailCopied, setEmailCopied] = useState(false)
+
+  const handleCopyEmail = async () => {
+    try {
+      await navigator.clipboard.writeText("contacto@rolandomacouzet.com")
+      setEmailCopied(true)
+      setTimeout(() => setEmailCopied(false), 2500)
+    } catch {
+      // Si el navegador no permite copiar, abrimos el correo como respaldo.
+      window.location.href = "mailto:contacto@rolandomacouzet.com"
+    }
+  }
   const heroCarouselRef = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
@@ -745,10 +757,11 @@ export default function HomePage() {
                       <p className="text-sm text-gray-600">La forma más rápida de recibir respuesta</p>
                     </div>
                   </a>
-                  <a
-                    href={`mailto:contacto@rolandomacouzet.com?subject=${encodeURIComponent("Trofeos personalizados")}`}
-                    className="flex items-center gap-4 p-6 border border-gray-300 rounded-lg hover:border-[#446047] hover:bg-[#446047]/5 transition-colors"
-                    aria-label="Enviar correo para trofeos personalizados"
+                  <button
+                    type="button"
+                    onClick={handleCopyEmail}
+                    className="w-full text-left flex items-center gap-4 p-6 border border-gray-300 rounded-lg hover:border-[#446047] hover:bg-[#446047]/5 transition-colors cursor-copy"
+                    aria-label="Copiar dirección de correo para trofeos personalizados"
                   >
                     <svg viewBox="0 0 24 24" className="w-10 h-10 shrink-0" fill="none" stroke="#446047" strokeWidth="1.5" aria-hidden="true">
                       <rect x="2" y="4" width="20" height="16" rx="2" />
@@ -757,8 +770,15 @@ export default function HomePage() {
                     <div>
                       <p className="font-bold text-black">Correo</p>
                       <p className="text-black">contacto@rolandomacouzet.com</p>
+                      {emailCopied ? (
+                        <p className="text-sm font-medium text-[#446047]" role="status">
+                          ¡Copiado! ✓
+                        </p>
+                      ) : (
+                        <p className="text-sm text-gray-600">Clic para copiar la dirección</p>
+                      )}
                     </div>
-                  </a>
+                  </button>
                 </div>
               </div>
 

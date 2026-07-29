@@ -30,7 +30,7 @@ export default function MobileMenu({ activeSection }: MobileMenuProps) {
     { id: "servicios", label: "Servicios", href: "#servicios" },
     { id: "portafolio", label: "Portafolio", href: "#portafolio" },
     { id: "mas-arte", label: "Más Arte", href: "#mas-arte" },
-    { id: "faq", label: "FAQ", href: "/faq", external: true },
+    { id: "faq", label: "FAQ", href: "/trofeosarte/faq", external: true },
     { id: "contact", label: "Contacto", href: "#contact" },
   ]
 

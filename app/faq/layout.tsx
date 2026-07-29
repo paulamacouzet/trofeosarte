@@ -18,6 +18,14 @@ export const metadata: Metadata = {
     url: "https://rolandomacouzet.com/trofeosarte/faq",
     type: "website",
     locale: "es_MX",
+    images: [
+      {
+        url: "/trofeosarte/images/trofeo-artistico-torneo-golf-escultura-bronce-mano-pelota.png",
+        width: 1200,
+        height: 630,
+        alt: "Trofeo artístico de golf en bronce para clubes deportivos en México",
+      },
+    ],
   },
 }
 

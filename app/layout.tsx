@@ -4,6 +4,7 @@ import { Inter } from "next/font/google"
 import Script from "next/script"
 import "./globals.css"
 
+// El sitio es estático: cambiar NEXT_PUBLIC_GA_ID en Vercel requiere un redeploy para surtir efecto.
 const GA_ID = process.env.NEXT_PUBLIC_GA_ID
 
 const inter = Inter({ subsets: ["latin"] })

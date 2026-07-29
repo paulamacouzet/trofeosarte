@@ -149,7 +149,7 @@ export default function FAQPage() {
                     Agendar una llamada
                   </Button>
                   <Button
-                    onClick={() => (window.location.href = "/#contact")}
+                    onClick={() => (window.location.href = "/trofeosarte/#contact")}
                     variant="outline"
                     className="border-[#446047] text-[#446047] hover:bg-[#446047] hover:text-white px-8 py-3 text-lg font-medium rounded-full"
                   >

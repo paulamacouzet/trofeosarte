@@ -640,7 +640,7 @@ export default function HomePage() {
               ].map((trophy, index) => (
                 <div key={index} className="aspect-square bg-gray-200 rounded-lg overflow-hidden portfolio-image">
                   <img
-                    src={trophy.src || "/placeholder.svg"}
+                    src={trophy.src || "/trofeosarte/placeholder.svg"}
                     alt={trophy.alt}
                     className="w-full h-full object-cover"
                     loading="lazy"
@@ -685,7 +685,7 @@ export default function HomePage() {
                   <CardContent className="p-6">
                     <div className="aspect-[3/4] bg-gray-200 rounded-lg mb-4 overflow-hidden">
                       <img
-                        src={artwork.image || "/placeholder.svg"}
+                        src={artwork.image || "/trofeosarte/placeholder.svg"}
                         alt={artwork.alt}
                         className="w-full h-full object-cover"
                         loading="lazy"

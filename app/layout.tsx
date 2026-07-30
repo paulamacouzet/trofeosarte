@@ -4,8 +4,9 @@ import { Inter } from "next/font/google"
 import Script from "next/script"
 import "./globals.css"
 
-// El sitio es estático: cambiar NEXT_PUBLIC_GA_ID en Vercel requiere un redeploy para surtir efecto.
-const GA_ID = process.env.NEXT_PUBLIC_GA_ID
+// ID de medición de Google Analytics 4 (propiedad "Trofeos Arte" bajo contacto@rolandomacouzet.com).
+// Es un identificador público (viaja en el HTML); la variable de entorno permite anularlo sin tocar código.
+const GA_ID = process.env.NEXT_PUBLIC_GA_ID || "G-76325WXNRJ"
 
 const inter = Inter({ subsets: ["latin"] })
 
